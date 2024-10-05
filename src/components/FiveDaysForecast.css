@@ -1,0 +1,75 @@
+/* General Styles */
+.daily-forecast {
+  background-color: #444444;
+  border-radius: 15px;
+  padding: 20px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 12px 12px 4px rgba(7, 7, 7, 0.7);
+  width: 414px;
+  height: 366px;
+  margin-inline-start: 52px;
+}
+
+/* Light Mode Styles */
+.daily-forecast.light {
+  background-color: #D9D9D9; /* Light mode background */
+  color: #000000; /* Light mode text color */
+  box-shadow: 12px 12px 4px rgba(100, 100, 100, 0.7); /* Light mode shadow */
+  border: 2px solid rgba(68, 68, 68, 0.6); /* Light mode border */
+}
+
+/* Dark Mode Styles */
+.daily-forecast.dark {
+  background-color: #444444; /* Dark mode background */
+  color: #FFFFFF; /* Dark mode text color */
+  box-shadow: 12px 12px 4px rgba(7, 7, 7, 0.7); /* Dark mode shadow */
+}
+
+.daily-forecast h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  text-align: center;
+}
+
+.daily-forecast ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.daily-forecast ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.daily-forecast ul li img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.daily-forecast ul li span {
+  flex: 1;
+  text-align: center;
+  font-weight: bold; /* Make text bold */
+}
+
+.daily-forecast ul li .temp {
+  flex: 1;
+  text-align: center; /* Centered temp text */
+}
+
+.daily-forecast ul li .date {
+  flex: 1;
+  text-align: center; /* Centered date text */
+}

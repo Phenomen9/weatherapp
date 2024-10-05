@@ -1,0 +1,191 @@
+:root {
+  --bg-color-light: #D9D9D9;
+  --bg-color-dark: #383838;
+  --text-color-light: #000000;
+  --text-color-dark: #FFFFFF;
+  --border-color-light: rgba(68, 68, 68, 0.6);
+  --border-color-dark: rgba(68, 68, 68, 1);
+  --placeholder-color-dark: #888;
+  --placeholder-color-light: #666;
+}
+
+.dashboard {
+  background-color: var(--bg-color-dark); /* Default dark background */
+  color: var(--text-color-dark); /* Default white text */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-weather-container {
+  display: flex; /* Use flexbox to align items side by side */
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 20px; /* Space below this section */
+}
+
+.header-container {
+  margin-right: 30px; /* Space between header and weather details */
+}
+
+.weather-details-container {
+  display: flex; /* Flexbox layout for weather details */
+  flex-direction: column; /* Stack items vertically within the weather details */
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Search Container Styles */
+.search-container {
+  margin-bottom: 20px; /* Add space below the search container */
+  width: 510px; /* Set a fixed width for the search container */
+  display: flex; /* Use flexbox to align items side by side */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Toggle Container Styles */
+.toggle-container {
+  margin-right: 1239px; /* Space between toggle and search input */
+  width: 100px;
+  height: 38.61px;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center the toggle switch vertically */
+  padding: 5px; /* Add some padding around the toggle */
+  border: 1px solid var(--border-color-dark); /* Border color for the toggle box */
+  border-radius: 45px; /* Rounded corners for the toggle box */
+  background-color: #444444; /* Background color for dark mode */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+  margin-top: -76px;
+  margin-bottom: 40px;
+}
+
+.toggle-container.dark {
+  background-color: #D9D9D9; /* D9Darker background for toggle in dark mode */
+}
+.toggle-container.dark {
+  background-color: #D9D9D9; /* D9Darker background for toggle in dark mode */
+}
+
+/* Search Input Styles */
+.search-input {
+  width: 803px; 
+  height: 38px;
+  margin-left: -240px;
+  padding: 10px 35px; /* Add padding for the icon */
+  border-radius: 48px; /* Rounded corners */
+  border: 2px solid var(--border-color-dark); /* Border color: #444444 (100%) */
+  background-color: #444444; /* Background color for the input in dark mode */
+  color: var(--text-color-dark); /* Text color for the input in dark mode */
+  font-size: 1rem; /* Font size for better readability */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions for color changes */
+}
+
+.search-input::placeholder {
+  color: var(--placeholder-color-dark); /* Placeholder text color */
+}
+
+/* Light Mode Styles for Search Input */
+.search-input.light {
+  background-color: var(--bg-color-light); /* Light background for input */
+  color: var(--text-color-light); /* Black text for input */
+  border: 2px solid var(--border-color-light); /* Border color: #FFFFFF (60%) */
+}
+
+/* Search Icon Styles */
+.search-icon {
+  position: absolute; /* Position the icon inside the input */
+  left: 10px; /* Adjust left position */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  pointer-events: none; /* Prevent mouse events on the icon */
+}
+
+.bi-search {
+  color: var(--placeholder-color-dark); /* Icon color in dark mode */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Light Mode Styles for the Search Icon */
+.light .bi-search {
+  color: black; /* Change icon color to black in light mode */
+}
+
+/* Toggle Switch Styles */
+.toggle-container input {
+  display: none; /* Hide the default checkbox */
+}
+
+.toggle-switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc; /* Default background color */
+  border-radius: 20px; /* Rounded corners */
+  position: relative; /* Position relative for the before element */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.toggle-switch::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: white; /* Toggle switch color */
+  border-radius: 50%; /* Rounded switch */
+  position: absolute; /* Position inside the toggle switch */
+  top: 2px; /* Center vertically */
+  left: 2px; /* Position on the left */
+  transition: transform 0.3s; /* Smooth transition for movement */
+}
+
+.toggle-container input:checked + .toggle-switch {
+  background-color: #111111 /* Green background when t
+}
+
+.toggle-container input:checked + .toggle-switch::before {
+  transform: translateX(20px); /* Move the toggle switch to the right */
+}
+
+/* Background and Text Colors for Modes */
+.dark {
+  background-color: var(--bg-color-dark); /* Dark background */
+  color: var(--text-color-dark); /* White text */
+}
+
+.light {
+  background-color: var(--bg-color-light); /* Light background */
+  color: var(--text-color-light); /* Black text */
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .header-weather-container {
+    flex-direction: column; /* Stack header and weather details vertically on small screens */
+  }
+
+  .header-container {
+    margin-right: 0; /* Remove right margin on small screens */
+    margin-bottom: 10px; /* Add space below header on small screens */
+  }
+
+  .forecast-container {
+    flex-direction: column; /* Stack forecast items vertically on small screens */
+    align-items: center; /* Center items on small screens */
+  }
+}
+
+/* Hover Effects */
+.search-input:hover {
+  border-color: #888; /* Change border color on hover */
+}
+
+.toggle-container:hover {
+  border-color: #888; /* Change border color on hover for the toggle */
+}

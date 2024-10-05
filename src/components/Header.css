@@ -1,0 +1,42 @@
+.header {
+  width: 510px;
+  height: 330px;
+  background-color: #444444; /* Default dark mode background */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF; /* Default white text */
+  padding-right: 15px;
+  padding-top: 15px; /* Added top padding to move content up */
+  box-shadow: 12px 12px 4px rgba(7, 7, 7, 0.5);
+}
+
+/* Light mode styles */
+.header.light {
+  background-color: #D9D9D9; /* Light mode background */
+  color: #000000; /* Black text in light mode */
+  border: 2px solid rgba(68, 68, 68, 0.6); /* Light mode border */
+}
+
+/* Dark mode styles */
+.header.dark {
+  background-color: #444444;
+  border: 2px solid rgba(68, 68, 68, 1); /* Dark mode border */
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 5px; /* Reduced space between city name and time */
+}
+
+.header h2 {
+  font-size: 70px;
+  margin-bottom: 0; /* Reduced space between time and date */
+}
+
+.header p {
+  font-size: 20px;
+  margin: 0; /* Remove margin for tight spacing */
+}
